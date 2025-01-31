@@ -22,7 +22,10 @@ const Paymentpage = ({username}) => {
       if (!session) {
         router.push('/Login'); // Redirect to Login if not authenticated
         }
+    }, [])
 
+
+    useEffect(() => {
       getData()
     }, [])
     
