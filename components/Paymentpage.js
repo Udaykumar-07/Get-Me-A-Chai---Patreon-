@@ -19,6 +19,10 @@ const Paymentpage = ({username}) => {
 
     
     useEffect(() => {
+      if (!session) {
+        router.push('/Login'); // Redirect to Login if not authenticated
+        }
+
       getData()
     }, [])
     
@@ -43,10 +47,8 @@ const Paymentpage = ({username}) => {
     // if(status==='loading'){
     //   return <div>Loading...</div>
     //   }
-
-    //   if (!session) {
-    //     router.push('/Login'); // Redirect to Login if not authenticated
-    //     }
+    
+    
         
         const handleChange = (e)=>{
           setpaymentform({...paymentform,[e.target.name] : e.target.value })
