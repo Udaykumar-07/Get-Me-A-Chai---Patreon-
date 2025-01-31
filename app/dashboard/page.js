@@ -26,7 +26,7 @@ const Page = () => {
         else{
     getData()
   }
-},[getData, router, session])
+},[])
 
 
   if (status === 'loading') {
