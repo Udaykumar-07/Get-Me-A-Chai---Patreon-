@@ -151,20 +151,12 @@ const Paymentpage = ({ username }) => {
         <input type="text" onChange={handleChange} value={paymentform.message} name="message" className="my-2 h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your message" required />
         <input type="number" onChange={handleChange} value={paymentform.amount} name="amount" className="my-2 h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your amount" required />
 
-          <div className="flex gap-2">
-            <button className="btn" onClick={() => pay(1000)}>Pay ₹10</button>
-            <button className="btn" onClick={() => pay(2000)}>Pay ₹20</button>
-            <button className="btn" onClick={() => pay(3000)}>Pay ₹30</button>
-          </div>
-
-          <button
-            type="button"
-            className="w-full my-2 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 disabled:from-purple-400"
-            disabled={paymentform.name.length < 3 || paymentform.message.length < 4 || !paymentform.amount}
-            onClick={() => pay(Number.parseInt(paymentform.amount) * 100)}
-          >
-            Pay
-          </button>
+        <div className="flex gap-2">
+        <button className="bg-slate-700 p-1 w-12 rounded-lg " onClick={()=> pay(1000)}>Pay ₹10</button>
+          <button className="bg-slate-700 p-1 w-12 rounded-lg " onClick={()=> pay(2000)}>Pay ₹20</button>
+          <button className="bg-slate-700 p-1 w-12 rounded-lg " onClick={()=> pay(3000)}>Pay ₹30</button>
+        </div>
+        <button type="button" className="w-full my-2 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 disabled:from-purple-400" disabled={paymentform.name?.length<3 || paymentform.message?.length<4 || paymentform.amount?.length<1} onClick={()=> pay(Number.parseInt(paymentform.amount)*100)}>Pay</button>
         </div>
       </div>
     </>
