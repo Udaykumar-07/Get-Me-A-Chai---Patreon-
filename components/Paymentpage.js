@@ -19,9 +19,9 @@ const Paymentpage = ({username}) => {
     const { data: session,status} = useSession() 
 
     
-    // if(status==='loading'){
-    //   return <div>Loading...</div>
-    //   }
+    if(status==='loading'){
+      return <div>Loading...</div>
+      }
     useEffect(() => {
       getData()
       }, [])

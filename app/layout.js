@@ -4,9 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SessionWrapper from '@/components/SessionWrapper'
 import connectDB from '@/database/connectDB'
-import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"], display: "optional" }); // ✅ Added `display=optional`
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
