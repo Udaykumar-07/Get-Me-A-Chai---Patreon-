@@ -17,12 +17,13 @@ const handler = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
+  secret: process.env.NEXTAUTH_SECRET,  
   
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
       if(account.provider=='github' || account.provider === "google"){
         await connectDB();
-        const currentUser = await User.findOne({email: email})
+        const currentUser = await User.findOne({email: user.email})
         if(!currentUser){
           //Create new user
           const newUser = await User.create({
@@ -32,11 +33,14 @@ const handler = NextAuth({
         }
         return true;
       }
+      return false
     },
     async session({ session, user, token }) {
       const dbUser = await User.findOne({email:session.user.email})
       console.log(dbUser)
+      if(dbUser){
         session.user.name = dbUser.username;
+      }
       return session
     },
   }
