@@ -24,7 +24,7 @@ const Paymentpage = ({username}) => {
       }
     useEffect(() => {
       getData()
-      }, [getData])
+      }, [])
       
     useEffect(() => {
       if(searchParams.get('paymentdone')=="true"){
