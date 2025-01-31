@@ -18,11 +18,6 @@ const Paymentpage = ({username}) => {
     const { data: session,status} = useSession() 
 
     
-    useEffect(() => {
-      if (!session) {
-        router.push('/Login'); // Redirect to Login if not authenticated
-        }
-    }, [])
 
 
     useEffect(() => {
