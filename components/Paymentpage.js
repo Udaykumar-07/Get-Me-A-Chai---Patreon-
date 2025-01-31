@@ -22,6 +22,9 @@ const Paymentpage = ({username}) => {
       if(status==='loading'){
         return <div>Loading...</div>
         }
+        if (!session) {
+          router.push('/Login'); // Redirect to Login if not authenticated
+          }
       getData()
       }, [])
       
