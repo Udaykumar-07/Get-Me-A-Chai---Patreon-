@@ -18,7 +18,11 @@ const Paymentpage = ({username}) => {
     const { data: session,status} = useSession() 
 
     
-
+    useEffect(() => {
+      if (status === "unauthenticated") {
+        router.push("/Login"); // Redirect if session expires
+      }
+    }, [status, session, router]);
 
     useEffect(() => {
       getData()
