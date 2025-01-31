@@ -18,17 +18,10 @@ const Paymentpage = ({username}) => {
     const { data: session,status} = useSession() 
 
     
-    if(status==='loading'){
-      return <div>Loading...</div>
-      }
-      if (!session) {
-        router.push('/Login'); // Redirect to Login if not authenticated
-        }
-        
     useEffect(() => {
       getData()
-      }, [])
-      
+    }, [])
+    
     useEffect(() => {
       if(searchParams.get('paymentdone')=="true"){
         toast('Thankyou for the donation', {
@@ -41,10 +34,19 @@ const Paymentpage = ({username}) => {
           progress: undefined,
           theme: "dark",
           transition: Bounce,
-          });
-          }
-        router.push(`/${username}`)
-        }, [searchParams, router, username])
+        });
+      }
+      router.push(`/${username}`)
+      
+    }, [searchParams, router, username])
+
+    if(status==='loading'){
+      return <div>Loading...</div>
+      }
+
+      if (!session) {
+        router.push('/Login'); // Redirect to Login if not authenticated
+        }
         
         const handleChange = (e)=>{
           setpaymentform({...paymentform,[e.target.name] : e.target.value })
