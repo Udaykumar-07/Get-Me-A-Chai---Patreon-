@@ -2,7 +2,7 @@ import React from 'react'
 import Paymentpage from '@/components/Paymentpage'
 import { notFound } from 'next/navigation';
 import User from '@/models/User';
-import ConnectDB from '@/database/ConnectDB'; // ✅ Import your DB connection
+import ConnectDB from '@/database/connectDB'; // ✅ Import your DB connection
 
 const Page = async ({ params }) => { 
   await ConnectDB(); // ✅ Ensure database connection before querying
