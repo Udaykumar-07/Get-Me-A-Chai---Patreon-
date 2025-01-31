@@ -149,3 +149,5 @@ transition={Bounce}
     </>
   )
     }
+
+    export default Paymentpage;
