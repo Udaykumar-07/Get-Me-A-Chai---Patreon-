@@ -147,9 +147,9 @@ const Paymentpage = ({ username }) => {
 
         <div className="flex-col w-[90vw] md:w-[50%] h-fit bg-slate-900 p-4 rounded-lg">
           <div className="text-xl">Make a Payment</div>
-          <input type="text" onChange={handleChange} value={paymentform.name} name="name" className="input-field" placeholder="Enter your name" required />
-          <input type="text" onChange={handleChange} value={paymentform.message} name="message" className="input-field" placeholder="Enter your message" required />
-          <input type="number" onChange={handleChange} value={paymentform.amount} name="amount" className="input-field" placeholder="Enter your amount" required />
+          <input type="text" onChange={handleChange} value={paymentform.name} name="name" className="my-2 h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your name" required />
+        <input type="text" onChange={handleChange} value={paymentform.message} name="message" className="my-2 h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your message" required />
+        <input type="number" onChange={handleChange} value={paymentform.amount} name="amount" className="my-2 h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your amount" required />
 
           <div className="flex gap-2">
             <button className="btn" onClick={() => pay(1000)}>Pay ₹10</button>
