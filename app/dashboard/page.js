@@ -23,9 +23,9 @@ const Page = () => {
       if (!session) {
         router.push('/Login'); // Redirect to Login if not authenticated
         }
-        else{
+      
     getData()
-  }
+  
 },[])
 
 
