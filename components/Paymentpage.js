@@ -40,13 +40,13 @@ const Paymentpage = ({username}) => {
       
     }, [searchParams, router, username])
 
-    if(status==='loading'){
-      return <div>Loading...</div>
-      }
+    // if(status==='loading'){
+    //   return <div>Loading...</div>
+    //   }
 
-      if (!session) {
-        router.push('/Login'); // Redirect to Login if not authenticated
-        }
+    //   if (!session) {
+    //     router.push('/Login'); // Redirect to Login if not authenticated
+    //     }
         
         const handleChange = (e)=>{
           setpaymentform({...paymentform,[e.target.name] : e.target.value })
