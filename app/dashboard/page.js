@@ -9,13 +9,7 @@ import { ToastContainer, toast, Bounce } from 'react-toastify';
 const Page = () => {
 
   const { data: session, status, update } = useSession()
-  const [form, setform] = useState({ name: "",
-    email: "",
-    username: "",
-    profilePic: "",
-    coverPic: "",
-    razorpayId: "",
-    razorpaySecret: "",})
+  const [form, setform] = useState({ name: ""})
   const router = useRouter();
   
   const getData = async ()=>{
