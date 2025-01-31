@@ -86,7 +86,7 @@ const Page = () => {
     <input value={form.username?form.username : ""} type="text" name='username' onChange={handleChange} id="Username" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
   </div>
   <div className="mb-5">
-    <label htmlFor="profilePic" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Profile Picture</label>
+    <label htmlFor="profilePic" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Profile Picture (ex:https://cdn.prod.website-files.com/62bdc93e9cccfb43e155104c/66d47aa1de72eccd774402df_Goku%20pfp%20400x400%20(13).png)</label>
     <input value={form.profilePic?form.profilePic : ""} type="text" name="profilePic" onChange={handleChange} id="profilePic" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
   </div>
   <div className="mb-5">
@@ -94,11 +94,11 @@ const Page = () => {
     <input value={form.coverPic?form.coverPic : ""} type="text" name='coverPic' onChange={handleChange} id="coverPic" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
   </div>
   <div className="mb-5">
-    <label htmlFor="razorpayId" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Razorpay Id</label>
+    <label htmlFor="razorpayId" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Razorpay Id (ex:rzp_test_36hmbo2TDniIdK)</label>
     <input value={form.razorpayId?form.razorpayId : ""} type="text" name='razorpayId' onChange={handleChange} id="razorpayId" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
   </div>
   <div className="mb-5">
-    <label htmlFor="razorpaySecret" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Razorpay secret</label>
+    <label htmlFor="razorpaySecret" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Razorpay secret (ex:GEUVYY4cOPmUvowuy7lAuSld)</label>
     <input value={form.razorpaySecret?form.razorpaySecret : ""} type="text" name='razorpaySecret' onChange={handleChange} id="razorpaySecret" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
   </div>
   <div className="flex items-start mb-5">
