@@ -8,6 +8,7 @@ import { useSearchParams } from "next/navigation"
 import { useRouter } from "next/navigation"
 import { Bounce } from "react-toastify"
 import { useSession} from "next-auth/react"
+import Image from "next/image";
 
 const Paymentpage = ({username}) => {
     const [paymentform,setpaymentform] = useState({name:"",message:"",amount:""})
@@ -103,9 +104,9 @@ transition={Bounce}
 />
      <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
       <div className="coverImg flex-col justify-center">
-        <img className="w-full object-fill h-80" src={currentUser.coverPic}/>
+        <Image className="w-full object-fill h-80" src={currentUser.coverPic}/>
         <div className="profile-pic w-full flex justify-center relative bottom-10 ">
-        <img className="rounded-full w-20 h-20 border-2 border-red-800"         
+        <Image className="rounded-full w-20 h-20 border-2 border-red-800"         
         //src="https://images8.alphacoders.com/134/thumbbig-1342990.webp"/>
         src={currentUser.profilePic}/>
         </div>
