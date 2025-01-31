@@ -125,7 +125,7 @@ const Paymentpage = ({ username }) => {
           <Image className="rounded-full w-20 h-20 border-2 border-red-800" src={currentUser.profilePic} alt="Profile Pic" />
         </div>
         <div className="p-username text-center relative bottom-10"> {username}</div>
-        <div className="p-email text-center relative bottom-10 text-slate-600">@ Let's help {username} get a chai!</div>
+        <div className="p-email text-center relative bottom-10 text-slate-600">@ Lets help {username} get a chai!</div>
         <div className="text-slate-400 text-center relative bottom-10">
           {payments.length} Payments . ₹{payments.reduce((a, b) => a + b.amount, 0)} raised
         </div>
